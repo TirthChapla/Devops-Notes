@@ -163,3 +163,40 @@ ENTRYPOINT ["java","-jar","app.jar"]
 
 ### 6. Overlay Network (Docker Swarm )
 ### 7. IPvlan Network (Docker Swarm )
+
+
+-------------
+
+# <span style="color:#ff9f1a"> Docker Network Commands </span>
+
+- Here are some useful Docker network commands that can help you manage Docker networks:
+- 1. **docker network ls**: List all Docker networks on your system.
+   ```bash
+   docker network ls
+   ```
+  ![img_2.png](img_2.png)
+- 2. **docker network create**: Create a new Docker network.
+   ```bash
+   docker network create network_name
+   ```
+  - Previous we see all the types of docker networks are called drivers
+  - To create a bridge network specifically, you can use:
+  - **-d** refers **Driver**
+  ```bash
+  docker network create network_name -d bridge
+  ```
+    ![img_3.png](img_3.png)
+
+
+- 3. **docker network inspect**: Display detailed information about a specific Docker network.
+    ```bash
+   docker network inspect network_name
+    ```
+- 4. **docker network rm**: Remove a Docker network.
+   ```bash
+   docker network rm network_name
+   ```
+- 5. **docker network connect**: Connect a container to a Docker network.
+   ```bash
+    docker network connect network_name container_id
+   ```
