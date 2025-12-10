@@ -1,4 +1,4 @@
-# <span style="color:red"> Docker 
+# <span style="color:#f79f1b"> Docker 
 
 - Docker is an open-source platform that 
     - automates the deployment, 
@@ -70,3 +70,54 @@ ENTRYPOINT ["java","-jar","app.jar"]
      - Make sure to replace `my-spring-boot-app` with the name you used when building the image if it's different.
      - You can stop the container by pressing `Ctrl + C` in the terminal where the container is running or by using the `docker stop` command followed by the container ID or name.
      - That's it! Your Spring Boot application should now be running inside a Docker container.
+
+
+# <span style="color:#37b8cc"> Useful Docker Commands </span>
+
+- Here are some useful Docker commands that can help you manage Docker containers, images, and other resources:
+- 1. **docker build**: Build a Docker image from a Dockerfile.
+   ```bash
+   docker build -t image_name .
+   ```
+- 2. **docker run**: Run a Docker container from an image.
+   ```bash
+   docker run -d -p host_port:container_port image_name
+   ```
+- 3. **docker ps**: List running Docker containers.
+   ```bash
+   docker ps
+   ```
+- 4. **docker ps -a**: List all Docker containers (running and stopped).
+   ```bash
+   docker ps -a
+   ```
+- 5. **docker stop**: Stop a running Docker container.
+   ```bash
+   docker stop container_id
+   ```
+- 6. **docker rm**: Remove a stopped Docker container.
+   ```bash
+   docker rm container_id
+   ```
+- 7. **docker rmi**: Remove a Docker image.
+   ```bash
+   docker rmi image_name
+   ```
+- 8. **docker images**: List all Docker images on your system.
+   ```bash
+   docker images
+   ```
+- 9. **docker logs**: View the logs of a Docker container.
+   ```bash
+   docker logs container_id
+   ```
+- 10. **docker exec**: Run a command inside a running Docker container.
+    ```bash
+    docker exec -it container_id bash
+    ```
+  - 11. **docker pull**: Download a Docker image from a registry (e.g., Docker Hub).
+      ```bash
+      docker pull image_name
+      ```  
+    
+
