@@ -119,5 +119,47 @@ ENTRYPOINT ["java","-jar","app.jar"]
       ```bash
       docker pull image_name
       ```  
-    
 
+
+# <span style="color:#ff6f61"> Docker Networking </span>
+
+- Docker networking allows containers to communicate with each other and with the outside world.
+  - Docker provides several built-in network drivers, including:    
+
+![img_1.png](img_1.png)
+
+- Allows **<span style="color:#f71b94">independent containers** to communicate on the same host.
+
+## Types of Docker Networks
+
+### 1. Host Network
+
+- Both the computer and docker container have same port number
+- Example: If the host machine has a web server running on port 80, and a Docker container is started with the host network mode, the container can also access the web server on port 80 without any port mapping.
+
+### 2. Bridge Network (Default)
+
+- The bridge between the host and docker container
+- Isolated network created by Docker on the host machine.
+
+### 3. User -Defined Bridge Network
+
+- Custom bridge networks created by users for better control over container communication.
+
+### 4. None Network
+
+- Containers have no network connectivity.
+- it is completely isolated from any network.
+- No, any internet access also
+
+-------------------
+- advanced networking options (Docker Swarm )
+
+### 5. MACVLAN Network (Docker Swarm )
+
+- Generally, it communicates with MAC address.
+- Assigns a MAC address to a container, making it appear as a physical device on the network.
+- Useful for legacy applications that require direct access to the physical network.
+
+### 6. Overlay Network (Docker Swarm )
+### 7. IPvlan Network (Docker Swarm )
