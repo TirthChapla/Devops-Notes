@@ -141,3 +141,28 @@
 * **Secrets and Configuration Management** : Kubernetes lets you store and manage sensitive information, such as passwords, OAuth tokens, and ssh keys. You can deploy and update secrets and application configuration without rebuilding your container images, and without exposing secrets in your stack configuration.
 
 <img src="img_7.png" width="400" height="250">
+
+
+# <span style= 'color:yellow'> K8 Setup :
+
+<img src="img_8.png" width="500" height="200">
+
+
+--------------------
+
+## Commands related to K8s :
+
+1. **Create pod** : 
+    
+    ``$ kubectl run my-pod --image=my-image``
+
+2. **Get pods** : 
+    
+    ``$ kubectl get pods``
+
+3. **Describe pod** : 
+    
+    ``$ kubectl describe pod my-pod``
+4. **Get Deployments** : 
+    
+    ``$ kubectl get deployments``
